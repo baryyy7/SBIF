@@ -4,7 +4,7 @@ import datetime
 parser = argparse.ArgumentParser()
 parser.add_argument('-g', '--gpu', type=str, default='0,1')
 parser.add_argument('--model-file', type=str, default=
-                    '/users/scratch/baryaacovi-2024-06-01/projects/SFDA-CBMT/logs_train/Domain3/20240704_014607.138681/checkpoint_175.pth.tar'
+                    './source.pth.tar'
                     )
 parser.add_argument('--only-pseudo', type=bool, default=False)
 parser.add_argument('--pseudo-path', type=str, default=f'./exp/{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}/pseudo_label_cbmt.npz')
@@ -12,7 +12,7 @@ parser.add_argument('--pkl-save-path', type=str, default=f'./exp/{datetime.datet
 parser.add_argument('--best-n', type=int, default=70)
 parser.add_argument('--order-repeat', type=int, default=0)
 parser.add_argument('--pkl-path', type=str, default=
-                    '/users/scratch/baryaacovi-2024-06-01/projects/SFDA-DPL/results/sam_ranking/Domain2_samvdpl_CBMT.pkl'
+                    './Domain2_samvdpl_CBMT.pkl'
                     )
 parser.add_argument('--sam-every', type=int, default=2)
 parser.add_argument('--use-sam', type=bool, default=True)

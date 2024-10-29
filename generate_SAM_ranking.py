@@ -105,7 +105,7 @@ predictor = None
 def init_sam():
     global predictor
     print("Loading SAM...")
-    sam_checkpoint = "/users/scratch/baryaacovi-2024-06-01/projects/SFDA-DPL/sam_vit_h_4b8939.pth"
+    sam_checkpoint = "./sam_vit_h_4b8939.pth"
     model_type = "vit_h"
     device = "cuda:1"
     sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
@@ -489,7 +489,6 @@ def generate_sam_score(train_loader,pseudo_label_dic, dice_cup_dic, filename_pkl
 
 # if args.dataset=="Domain2":        
 #     npfilename = './results/prototype/pseudolabel_D2_0610_og.npz'
-#     npfilename = '/users/scratch/baryaacovi-2024-06-01/projects/SFDA-CBMT/pseudo_label_cbmt_chk175_all_FORSAM.npz'
 # elif args.dataset=="Domain1":        
 #     npfilename = './results/prototype/pseudolabel_D1_0610_og.npz'
 
